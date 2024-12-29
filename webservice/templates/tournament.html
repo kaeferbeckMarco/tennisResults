@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container">
+<h1 class="mt-5">Tournaments</h1>
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Surface</th>
+        <th>Draw Size</th>
+        <th>Level</th>
+        <th>Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for tournament in tournaments %}
+    <tr>
+        <td><a href="{{ url_for('matches', tourney_id=tournament[0]) }}">{{ tournament[0] }}</a></td>
+        <td>{{ tournament[1] }}</td>
+        <td>{{ tournament[2] }}</td>
+        <td>{{ tournament[3] }}</td>
+        <td>{{ tournament[4] }}</td>
+        <td>{{ tournament[5] }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>

@@ -26,6 +26,9 @@ class TennisServerDomainService:
     def visualize_knowledge_graph(self, rdf_graph):
         return self.rdf_service.visualize_knowledge_graph(rdf_graph)
 
+    def visualize_knowledge_graph_in_notebook(self, rdf_graph):
+        return self.rdf_service.visualize_knowledge_graph_in_notebook(rdf_graph)
+
 
 
 
